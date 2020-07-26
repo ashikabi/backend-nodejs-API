@@ -1,0 +1,1748 @@
+{
+	"info": {
+		"_postman_id": "1dd56153-e9df-4aee-a319-9a25134e14f4",
+		"name": "MovieRentalAPI",
+		"description": "Technical Test - Applaudo Studios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"admin.user@gmail.com\",\n    \"password\" : \"querty1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"user.email@gmail.com\",\n    \"password\" : \"querty1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "302"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"12e-mhsm3kzyk30OOfUDGAwJj2+b6uQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:01:11 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTU0NzY4NzEsImV4cCI6MTU5NTQ3NzQ3MX0.2q33h2qAw0ZNz6lnazm6jik37w1ty0IRKwMLedWEOiI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMSwiZW1haWwiOiJhZG1pbi51c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTIyVDA0OjM0OjU3LjAwMFoifSwiaWF0IjoxNTk1MzkyNTgxLCJleHAiOjE1OTUzOTMxODF9.lJ790gVBNcsgWx2yy5twilJo-mdM1kJTX2bvXVf5HWU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/token",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"token"
+					]
+				},
+				"description": "Return the current Token if is not expired or create a new token if your current token is expired. \nIt wasn't required but I have added, I thought it may be useful\nhttps://movierentalapi.herokuapp.com/token"
+			},
+			"response": [
+				{
+					"name": "Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTU0NzY4NzEsImV4cCI6MTU5NTQ3NzQ3MX0.2q33h2qAw0ZNz6lnazm6jik37w1ty0IRKwMLedWEOiI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/token",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "302"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"12e-mhsm3kzyk30OOfUDGAwJj2+b6uQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:02:01 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTU0NzY4NzEsImV4cCI6MTU5NTQ3NzQ3MX0.2q33h2qAw0ZNz6lnazm6jik37w1ty0IRKwMLedWEOiI\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMSwiZW1haWwiOiJhZG1pbi51c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTIyVDA0OjM0OjU3LjAwMFoifSwiaWF0IjoxNTk1MzkyNTgxLCJleHAiOjE1OTUzOTMxODF9.lJ790gVBNcsgWx2yy5twilJo-mdM1kJTX2bvXVf5HWU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/logout",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
+				},
+				"description": "Remove the current token from the list of tokens\nhttps://movierentalapi.herokuapp.com/logout"
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTU0NzY4NzEsImV4cCI6MTU5NTQ3NzQ3MX0.2q33h2qAw0ZNz6lnazm6jik37w1ty0IRKwMLedWEOiI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/logout",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"15-BSFgXDhnHlSyjegBLOQliqz9mxg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:03:14 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Log out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add a Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc3NTQxLCJleHAiOjE1OTU0NzgxNDF9.j436bP5golqgQci_G_so7Ed_UUPeI8k-EYUit44GQ-I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Captain America Civil War\",\n  \"description\": \"Marvel Universe\",\n  \"image\":\"https://am23.mediaite.com/tms/cnt/uploads/2019/04/avengers-endgame-sets-up-future-captain-america.jpg\",\n  \"stock\": 6,\n  \"rentalPrice\": 3.99,\n  \"salePrice\":  9.55,\n  \"availability\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc3NTQxLCJleHAiOjE1OTU0NzgxNDF9.j436bP5golqgQci_G_so7Ed_UUPeI8k-EYUit44GQ-I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Captain America Civil War\",\n  \"description\": \"Marvel Universe\",\n  \"image\":\"https://am23.mediaite.com/tms/cnt/uploads/2019/04/avengers-endgame-sets-up-future-captain-america.jpg\",\n  \"stock\": 6,\n  \"rentalPrice\": 3.99,\n  \"salePrice\":  9.55,\n  \"availability\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"102-LJT93/qyHY0dx3+0Uwmo5LzMebI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:13:10 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"'Captain America Civil War'\",\n    \"description\": \"'Marvel Universe'\",\n    \"image\": \"'https://am23.mediaite.com/tms/cnt/uploads/2019/04/avengers-endgame-sets-up-future-captain-america.jpg'\",\n    \"stock\": 6,\n    \"rentalPrice\": 3.99,\n    \"salePrice\": 9.55,\n    \"availability\": 1,\n    \"id\": 21\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all the movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMSwiZW1haWwiOiJhZG1pbi51c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTIyVDA0OjM0OjU3LjAwMFoifSwiaWF0IjoxNTk1MzkzMjcyLCJleHAiOjE1OTUzOTM4NzJ9.53BucW9mrZDHNMG4jtTI5Vb-33zbxgLCQVCoS62pbnU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Shooter\",\n  \"description\": \"Action Movie\",\n  \"image\": \"https://upload.wikimedia.org/wikipedia/en/0/04/Daredevil_poster.JPG\",\n  \"stock\": 10,\n  \"rentalPrice\": 6.99,\n  \"salePrice\":  9.99,\n  \"availability\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies?availability=1&limit=2&start=0",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "availability",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						}
+					]
+				},
+				"description": "As an Admin you can add the following filters:\navailability=1 ; availability=0\n\nas any user logged in or not :\n\nlimit=5 it means the total movies per page\nand start=0 where to start the movies in the current page\nhttps://movierentalapi.herokuapp.com/movies?availability=1&limit=2&start=0"
+			},
+			"response": [
+				{
+					"name": "Get all the movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc3NTQxLCJleHAiOjE1OTU0NzgxNDF9.j436bP5golqgQci_G_so7Ed_UUPeI8k-EYUit44GQ-I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Shooter\",\n  \"description\": \"Action Movie\",\n  \"image\": \"https://upload.wikimedia.org/wikipedia/en/0/04/Daredevil_poster.JPG\",\n  \"stock\": 10,\n  \"rentalPrice\": 6.99,\n  \"salePrice\":  9.99,\n  \"availability\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies?availability=1&limit=3&start=0",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "availability",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "start",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "639"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"27f-ycMVa3zQ2b5GmW/t+snOVHskvZs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:14:28 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 5,\n    \"result\": [\n        {\n            \"id\": 4,\n            \"title\": \"Batman\",\n            \"description\": \"DC comics\",\n            \"image\": \"https://m.media-amazon.com/images/I/51zpKk5j26L._SY346_.jpg\",\n            \"stock\": 12,\n            \"rentalPrice\": 4.99,\n            \"salePrice\": 8.99,\n            \"likes\": 2\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Black Panther\",\n            \"description\": \"Marvel Universe\",\n            \"image\": \"https://m.media-amazon.com/images/I/51zpKk5j26L._SY346_.jpg\",\n            \"stock\": 5,\n            \"rentalPrice\": 7.99,\n            \"salePrice\": 12.99,\n            \"likes\": 5\n        },\n        {\n            \"id\": 21,\n            \"title\": \"Captain America Civil War\",\n            \"description\": \"Marvel Universe\",\n            \"image\": \"https://am23.mediaite.com/tms/cnt/uploads/2019/04/avengers-endgame-sets-up-future-captain-america.jpg\",\n            \"stock\": 6,\n            \"rentalPrice\": 3.99,\n            \"salePrice\": 9.55,\n            \"likes\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get the detail of a single movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/4",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"4"
+					]
+				},
+				"description": "Gets the detail of one movie \nhttps://movierentalapi.herokuapp.com/movies/4"
+			},
+			"response": [
+				{
+					"name": "Get the detail of a single movie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"b2-e7cYTlyHYg/OcqQeSOmAK1gCjoU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:15:42 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"title\": \"Batman\",\n    \"description\": \"DC comics\",\n    \"image\": \"https://m.media-amazon.com/images/I/51zpKk5j26L._SY346_.jpg\",\n    \"stock\": 12,\n    \"rentalPrice\": 4.99,\n    \"salePrice\": 8.99,\n    \"likes\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Update a Movie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMSwiZW1haWwiOiJhZG1pbi51c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTIyVDA0OjM0OjU3LjAwMFoifSwiaWF0IjoxNTk1Mzk0NjYyLCJleHAiOjE1OTUzOTUyNjJ9.tbkW8hp79L19SilOCOeH8umqjFZndJya-w1b3_vKx2M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Captain America Winter Soldier\",\n  \"rentalPrice\": 4.99,\n  \"availability\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/11",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"11"
+					]
+				},
+				"description": "You can modify the attributes of a movie"
+			},
+			"response": [
+				{
+					"name": "Update a Movie",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc3NTQxLCJleHAiOjE1OTU0NzgxNDF9.j436bP5golqgQci_G_so7Ed_UUPeI8k-EYUit44GQ-I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"salePrice\" : 9.95\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"b2-HWbE9j4IsSLYmKwSQ0IF3ChVuGQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:17:22 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"title\": \"Batman\",\n    \"description\": \"DC comics\",\n    \"image\": \"https://m.media-amazon.com/images/I/51zpKk5j26L._SY346_.jpg\",\n    \"stock\": 12,\n    \"rentalPrice\": 4.99,\n    \"salePrice\": 9.95,\n    \"likes\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete a Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyMSwiZW1haWwiOiJhZG1pbi51c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTIyVDA0OjM0OjU3LjAwMFoifSwiaWF0IjoxNTk1Mzk0NjYyLCJleHAiOjE1OTUzOTUyNjJ9.tbkW8hp79L19SilOCOeH8umqjFZndJya-w1b3_vKx2M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/6",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a Movie",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc3NTQxLCJleHAiOjE1OTU0NzgxNDF9.j436bP5golqgQci_G_so7Ed_UUPeI8k-EYUit44GQ-I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/21",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"21"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"20-//btUKJlIW+vetW8bMtgYs+uOXM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:18:52 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Movie was deleted!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Like a Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTUzOTUxNDQsImV4cCI6MTU5NTM5NTc0NH0.4ptUqg4qnZmXLJB0KQXwJ__Rh0Y7fVby-eQJILd6w0I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/3/like",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"like"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Like a Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJlbWFpbCI6ImFydGlnYXJvYmVydG9qb3NlQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMThUMDU6MDE6MDMuMDAwWiJ9LCJpYXQiOjE1OTU0Nzc5NjgsImV4cCI6MTU5NTQ3ODU2OH0.xpcPzPm2xpbUEHCxI9MTPkaMkeCUzzi9k87UeiTWXrw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4/like",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4",
+								"like"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"22-UF3yLqwQ0iDsKKJhcDK5+ZjOkOM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:19:48 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You liked that movie\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Unlike a movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTUzOTUxNDQsImV4cCI6MTU5NTM5NTc0NH0.4ptUqg4qnZmXLJB0KQXwJ__Rh0Y7fVby-eQJILd6w0I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/3/unlike",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"unlike"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Unlike a movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJlbWFpbCI6ImFydGlnYXJvYmVydG9qb3NlQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMThUMDU6MDE6MDMuMDAwWiJ9LCJpYXQiOjE1OTU0Nzc5NjgsImV4cCI6MTU5NTQ3ODU2OH0.xpcPzPm2xpbUEHCxI9MTPkaMkeCUzzi9k87UeiTWXrw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4/unlike",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4",
+								"unlike"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"24-QuzKQqFmKuEOvzAEsLsbbGEJ0FA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:20:10 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You unliked that movie\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Rent a Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTUzOTUxNDQsImV4cCI6MTU5NTM5NTc0NH0.4ptUqg4qnZmXLJB0KQXwJ__Rh0Y7fVby-eQJILd6w0I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\" : 2,\n    \"days\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/3/rent",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"rent"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Rent a Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJlbWFpbCI6ImFydGlnYXJvYmVydG9qb3NlQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMThUMDU6MDE6MDMuMDAwWiJ9LCJpYXQiOjE1OTU0Nzc5NjgsImV4cCI6MTU5NTQ3ODU2OH0.xpcPzPm2xpbUEHCxI9MTPkaMkeCUzzi9k87UeiTWXrw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\" : 2,\n    \"days\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4/rent",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4",
+								"rent"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "149"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"95-+XeWzYAzXSJOHUElBI5YO8TfzDo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:20:38 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Rented! Please remember to return the movie before [Sun Jul 26 2020 04:20:38 GMT+0000 (Coordinated Universal Time)] to avoid penalties.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Buy a Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTUzOTUxNDQsImV4cCI6MTU5NTM5NTc0NH0.4ptUqg4qnZmXLJB0KQXwJ__Rh0Y7fVby-eQJILd6w0I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/3/buy",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"buy"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buy a Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJlbWFpbCI6ImFydGlnYXJvYmVydG9qb3NlQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMThUMDU6MDE6MDMuMDAwWiJ9LCJpYXQiOjE1OTU0Nzc5NjgsImV4cCI6MTU5NTQ3ODU2OH0.xpcPzPm2xpbUEHCxI9MTPkaMkeCUzzi9k87UeiTWXrw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4/buy",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4",
+								"buy"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"23-0hZD7Jh3zcOVXEYGXeuFvq+RRWY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:21:45 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Transaction processed\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Return a Movie",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMSwiZW1haWwiOiJ1c2VyLmVtYWlsQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMjJUMDQ6MzQ6NDguMDAwWiJ9LCJpYXQiOjE1OTUzOTUxNDQsImV4cCI6MTU5NTM5NTc0NH0.4ptUqg4qnZmXLJB0KQXwJ__Rh0Y7fVby-eQJILd6w0I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/movies/3/return",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies",
+						"3",
+						"return"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Return a Movie",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJlbWFpbCI6ImFydGlnYXJvYmVydG9qb3NlQGdtYWlsLmNvbSIsInJvbGUiOiJVU0VSX1JPTEUiLCJzdGF0dXMiOiJBIiwiY3JlYXRlZCI6IjIwMjAtMDctMThUMDU6MDE6MDMuMDAwWiJ9LCJpYXQiOjE1OTU0Nzc5NjgsImV4cCI6MTU5NTQ3ODU2OH0.xpcPzPm2xpbUEHCxI9MTPkaMkeCUzzi9k87UeiTWXrw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/movies/4/return",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4",
+								"return"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"dd-HZOhNf+yhBgRBZTKQ9vSITDNYOY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 04:21:12 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"penalty\": 0,\n    \"message\": \"You have to pay $ 0(for 2 movies) there is a charge of 5% over the rentalPrice per delayed day.\",\n    \"details\": \"expected return date : [Sun Jul 26 2020 04:20:38 GMT+0000 (Coordinated Universal Time)]\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Recovery Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jrartiga001@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/recovery",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"recovery"
+					]
+				},
+				"description": "https://movierentalapi.herokuapp.com/recovery"
+			},
+			"response": [
+				{
+					"name": "Recovery Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jrartiga001@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/recovery",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"recovery"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"3c-8jFvHrFeEHTHvPORHRsDZbHZ1wc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 03:51:32 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"An email was sent to you, please check it out!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register (create your account)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"artiga_king@hotmail.com\",\n    \"password\" : \"superSecret123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "\nhttps://movierentalapi.herokuapp.com/register\nYou will receive an email"
+			},
+			"response": [
+				{
+					"name": "Register (create your account)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"artiga_king@hotmail.com\",\n    \"password\" : \"superSecret123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"3c-8jFvHrFeEHTHvPORHRsDZbHZ1wc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 03:53:07 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"An email was sent to you, please check it out!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Change Role of users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc2NTM3LCJleHAiOjE1OTU0NzcxMzd9.dhxFr73EtUaR81_xs6K02sOgbCTlYUL3uxZTC0osBBU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role\" : \"ADMIN_ROLE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://movierentalapi.herokuapp.com/users/4",
+					"protocol": "https",
+					"host": [
+						"movierentalapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"4"
+					]
+				},
+				"description": "https://movierentalapi.herokuapp.com/users/4"
+			},
+			"response": [
+				{
+					"name": "Change Role of users",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6ImpyYXJ0aWdhMDAxQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTl9ST0xFIiwic3RhdHVzIjoiQSIsImNyZWF0ZWQiOiIyMDIwLTA3LTE4VDA1OjAwOjM3LjAwMFoifSwiaWF0IjoxNTk1NDc2NTM3LCJleHAiOjE1OTU0NzcxMzd9.dhxFr73EtUaR81_xs6K02sOgbCTlYUL3uxZTC0osBBU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role\" : \"ADMIN_ROLE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://movierentalapi.herokuapp.com/users/4",
+							"protocol": "https",
+							"host": [
+								"movierentalapi",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1e-MotjVeKIZ6eLI4lhIyfp1B7kbiI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Jul 2020 03:57:17 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User was updated\"\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
